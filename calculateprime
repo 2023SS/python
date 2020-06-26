@@ -1,0 +1,13 @@
+def findprimes(n):
+	ans = []
+	v = [i for i in range(0, n+1)]
+	for i in range(2, n+1):
+		if v[i] != 0:
+			ans.append(v[i])
+			print (ans)
+			# delete all multiple of v[i]
+			for j in range(v[i], n+1, v[i]):
+				if v[j]:
+					print ("remove:", v[j])
+					v[j] = 0
+	return ans
